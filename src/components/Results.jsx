@@ -1,12 +1,11 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Results({results}) {
   return (
-    <div>
+    <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto py-4 px-2'>
       {results.map((item)=>(
-        <div key = {item.id}>
-           <h2>{item.original_title}</h2>
-            </div>
+       <Card key ={item.id} result={item} />
       ))}
     </div>
   )
