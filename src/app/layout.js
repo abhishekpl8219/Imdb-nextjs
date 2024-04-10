@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Providers from "./Providers";
 import NavBar from "@/components/NavBar";
 import SearchBox from "@/components/SearchBox";
-
+import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,11 +17,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Providers>
+          <Suspense>
         <Header />
         <NavBar />
         <SearchBox />
         {children}
-        </Providers></body>
+        </Suspense>
+        </Providers>
+        </body>
     </html>
   );
 }
