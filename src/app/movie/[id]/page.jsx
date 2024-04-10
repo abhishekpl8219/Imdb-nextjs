@@ -18,7 +18,7 @@ export default async function page({params}) {
           height={300}
           className='rounded-lg'
           style={{ maxWidth: '100%', height: '100%' }}
-        ></Image>
+        alt= {movie.title}></Image>
         <div className='p-2'>
             <h2 className='font-bold mb-3 text-lg'>{movie.title || movie.name}</h2>
             <p className='text-lg mb-3'>{movie.overview}</p>
